@@ -64,26 +64,27 @@ where **L** is the length of the read.
 
 
 ### 2 Coverage
-How long is the reference sequence?
+* How long is the reference sequence?
 
-How long is the combined sequence of the reads?
+* How long is the combined sequence of the reads?
 
-The coverage is the factor how much larger the set of reads is compared to the reference length. It describes how often the reference is covered by the set of reads.
+* The coverage is the factor how much larger the set of reads is compared to the reference length. It describes how often the reference is covered by the set of reads.
 
-What is the coverage of the given dataset?
+* What is the coverage of the given dataset?
 
 ### 3 Compare different regions
 Create and save a fasta file *A.fasta* which contains all reads from the file *reads.fasta* which starts in the region 500,000-600,000 and another FASTA file *B.fasta* with all reads which start in the region 1,500,000-1,600,000.
 The reads in the new files should have IDs 1,2,3,...n.
 
-What is the coverage of read set *A* and what is the coverage of read set *B*?
-Are they the same? Why or why not?
+* What is the coverage of read set *A* and what is the coverage of read set *B*?
+
+* Are they the same? Why or why not?
 
 ### 4 Output statistics of reads
 Use your file A.fasta to answer the following questions:
 
-How large is the shortest read in the file?
+* How large is the shortest read in the file?
 
-How many reads are contained in the file?
+* How many reads are contained in the file?
 
-What is the average length?
+* What is the average length?
