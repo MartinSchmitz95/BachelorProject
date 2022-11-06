@@ -1,0 +1,3 @@
+Shortest read length: 13420
+Number of reads: 194
+Average read length: 17467.55154639175

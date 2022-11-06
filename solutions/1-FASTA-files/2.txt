@@ -1,0 +1,3 @@
+The reference seq length: 2000000
+Combined reads length: 61722700
+Coverage: 30.86135
