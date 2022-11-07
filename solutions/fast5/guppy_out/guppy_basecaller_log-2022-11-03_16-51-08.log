@@ -1,0 +1,37 @@
+2022-11-03 16:51:08.630580 [guppy/message] ONT Guppy basecalling software version 3.0.3+7e7b7d0
+config file:        /opt/ont-guppy-cpu_3.0.3/data/dna_r9.4.1_450bps_hac.cfg
+model file:         /opt/ont-guppy-cpu_3.0.3/data/template_r9.4.1_450bps_hac.jsn
+input path:         /home/katarina/Documents/ProjektR/BachelorProject-main/1-FAST5-files/raw_signals
+save path:          ./guppy_out2
+chunk size:         1000
+chunks per runner:  1000
+records per file:   4000
+num basecallers:    2
+cpu mode:           ON
+threads per caller: 1
+
+2022-11-03 16:51:09.976486 [guppy/message] Found 10 fast5 files to process.
+2022-11-03 16:51:09.976530 [guppy/message] Init time: 1346 ms
+2022-11-03 16:51:09.998445 [guppy/info] Read '9a05e00f-0620-4c2f-a328-1bdee0362ada' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_120_ch_474_strand.fast5" has been loaded.
+2022-11-03 16:51:09.998553 [guppy/info] Read '0cbda042-b30a-42ca-94d9-4869a954cdd6' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_137_ch_366_strand.fast5" has been loaded.
+2022-11-03 16:51:09.998636 [guppy/info] Read 'bea3e1f5-0142-4811-adc4-3f08d81cf3e0' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_126_ch_234_strand.fast5" has been loaded.
+2022-11-03 16:51:09.998867 [guppy/info] Read 'e13c575c-7b40-46a1-8552-26fd48a1009c' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_147_ch_313_strand.fast5" has been loaded.
+2022-11-03 16:51:09.998889 [guppy/info] Read '87492ad1-3496-4a32-a550-880b0bee0751' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_11_ch_252_strand.fast5" has been loaded.
+2022-11-03 16:51:09.999041 [guppy/info] Read '6f7f0914-0070-4594-967f-0d90fe724711' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_177_ch_502_strand.fast5" has been loaded.
+2022-11-03 16:51:09.999108 [guppy/info] Read '9f4a9f8e-3b98-4102-af4f-b18eca6927fd' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_129_ch_258_strand.fast5" has been loaded.
+2022-11-03 16:51:09.999113 [guppy/info] Read 'e2e86169-28d8-426a-bc10-1b04170161af' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_135_ch_422_strand.fast5" has been loaded.
+2022-11-03 16:51:09.999174 [guppy/info] Read 'b6bf364d-c6a9-4c90-b941-d3fc345899ac' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_218_ch_209_strand.fast5" has been loaded.
+2022-11-03 16:51:09.999188 [guppy/info] Read 'fea5c4e2-2964-4a82-9f25-ea43db9dd8b3' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_167_ch_216_strand.fast5" has been loaded.
+2022-11-03 16:51:10.335092 [guppy/info] Read '9a05e00f-0620-4c2f-a328-1bdee0362ada' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_120_ch_474_strand.fast5" completed.
+2022-11-03 16:51:11.024137 [guppy/info] Read '0cbda042-b30a-42ca-94d9-4869a954cdd6' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_137_ch_366_strand.fast5" completed.
+2022-11-03 16:51:11.963355 [guppy/info] Read 'bea3e1f5-0142-4811-adc4-3f08d81cf3e0' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_126_ch_234_strand.fast5" completed.
+2022-11-03 16:51:13.141800 [guppy/info] Read 'e13c575c-7b40-46a1-8552-26fd48a1009c' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_147_ch_313_strand.fast5" completed.
+2022-11-03 16:51:13.799894 [guppy/info] Read '6f7f0914-0070-4594-967f-0d90fe724711' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_177_ch_502_strand.fast5" completed.
+2022-11-03 16:51:14.277957 [guppy/info] Read '9f4a9f8e-3b98-4102-af4f-b18eca6927fd' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_129_ch_258_strand.fast5" completed.
+2022-11-03 16:51:14.744035 [guppy/info] Read 'fea5c4e2-2964-4a82-9f25-ea43db9dd8b3' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_167_ch_216_strand.fast5" completed.
+2022-11-03 16:51:14.793244 [guppy/info] Read '87492ad1-3496-4a32-a550-880b0bee0751' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_11_ch_252_strand.fast5" completed.
+2022-11-03 16:51:17.211928 [guppy/info] Read 'e2e86169-28d8-426a-bc10-1b04170161af' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_135_ch_422_strand.fast5" completed.
+2022-11-03 16:51:17.591445 [guppy/info] Read 'b6bf364d-c6a9-4c90-b941-d3fc345899ac' from file "GXB01103_20180501_FAH86018_GA30000_mux_scan_CHM13_1_36685_read_218_ch_209_strand.fast5" completed.
+2022-11-03 16:51:17.600109 [guppy/message] Caller time: 7623 ms, Samples called: 132542, samples/s: 17387.1
+2022-11-03 16:51:17.600207 [guppy/message] Finishing up any open output files.
+2022-11-03 16:51:19.299927 [guppy/message] Basecalling completed successfully.
