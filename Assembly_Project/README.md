@@ -4,13 +4,10 @@ This project deals with the topic of Genome assembly with Neural networks. In th
 
 The goal is to train a neural network to classify the edges in the graph as positive and negative edges. Positive edges are edges that are part of an optimal assembly walk, and negative edges are edges that are not part of an optimal assembly walk. After classifying edges, it is easy to find the assembly and walk through the graph to create an assembly.
 
-give them a dataset of graphs as networkx file (including sequence as a feature, but maybe without other features)
-load networkx file
-
 ## Prepare the dataset
-Write a script **process_data.py**
-Input: path to the dataset
-Output: two files: **x.pkl** and **y.pkl**
+* Write a script **process_data.py**
+* Input: path to the dataset
+* Output: two files: **x.pkl** and **y.pkl**
 
 First, you need to download the dataset from Godot and unpack the file. You can find the data under: **\home\mschmitz\shared\chr19_raven_graphs_nx_with_gt.tar**
 The dataset contains three folders: train, val and test. Train contains two files, the other folders contain one each. The files are pickled networkx graphs.
@@ -23,9 +20,9 @@ The networkx graph contains different edge features. Save the edge features **ov
 Tip: The graphs are quite large. For debugging it could make sense to split the graph or only process a subset.
 
 ## Train Neural Network
-Write a script **train.py**
-Input: two files: **x.pkl** and **y.pkl**
-Output: The trained neural network **model.py**
+* Write a script **train.py**
+* Input: two files: **x.pkl** and **y.pkl**
+* Output: The trained neural network **model.py**
 
 Checkout [this tutorial](https://medium.com/biaslyai/pytorch-introduction-to-neural-network-feedforward-neural-network-model-e7231cff47cb) and [this tutorial](https://pytorch.org/tutorials/beginner/basics/intro.html) of how a MultiLayer Perceptron works and can be implemented in Python using Pytorch. Since this is your first encounter with machine learning, you can take some time to try to understand the basic concepts and follow the tutorials. I also encourage you to read other beginner-friendly introductions to neural networks at this point.
 Implement a neural network with a training and evaluation loop to process the dataset consisting of samples **x.pkl** and labels **y.pkl**. This is a basic classification task. Follow [this tutorial](https://medium.com/biaslyai/pytorch-introduction-to-neural-network-feedforward-neural-network-model-e7231cff47cb) for the implementation.
@@ -44,9 +41,9 @@ Track the metrics using [Weights and Biases](https://docs.wandb.ai/guides/track)
 
 ## Optional: Test different node and edge features
 
-Create a file **pipeline.py**
-Input: a node feature configuration
-Output: trained model and evaluation
+* Create a file **pipeline.py**
+* Input: a node feature configuration
+* Output: trained model and evaluation
 
 The script calls both: **process_data.py** and **train.py** to process data and train a model on it. Then it evaluates the performance of the newly trained model.
 The goal of the task is to experiment with different feature vectors as input for the neural network. Feature engineering is an important part of many machine-learning projects.
