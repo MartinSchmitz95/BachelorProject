@@ -53,6 +53,7 @@ Test the following features as input for the neural network:
 Edge Features:
 * overlap length
 * overlap similarity
+
 Node Features:
 * sequence length
 * in- and out-degree
