@@ -102,7 +102,7 @@ def train(additionalFeature):
     test_path="chr19_raven_graphs_nx_with_gt/test"
     dataset = FeatureDataset(test_path, additionalFeature)
 
-    model = FeedforwardModel(FeatureDataset.__getinputsize__(dataset), 100)
+    model = FeedforwardModel(FeatureDataset.__getinputsize__(dataset), 100, 50, 150)
 
     criterion = torch.nn.BCELoss()
     optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
@@ -120,19 +120,20 @@ def train(additionalFeature):
         y_prevTrain = (y_prevTrain>0.5).float()
         statistics(y_prevTrain.squeeze(), y, before_train)
 
+    model.zero_grad()
     model.train()
 
     train_path="chr19_raven_graphs_nx_with_gt/train"
     dataset = FeatureDataset(train_path, additionalFeature)
-    
+
     criterion.weight = torch.tensor([pos_to_neg_ratio(dataset)])
 
     print("Train statistics (last epoch):")
     print()
 
     epoch = 20
-    for e in range(epoch):
-        for x, y in dataset:                   
+    for x, y in dataset:
+        for e in range(epoch):             
             optimizer.zero_grad()
             
             y_t = model(x)
@@ -142,19 +143,23 @@ def train(additionalFeature):
             loss.backward()
             optimizer.step()
 
-            if (e == epoch - 1):
-                y_t = (y_t>0.5).float()
-                statistics(y_t.squeeze(), y, loss)
+            print("epoch " + str(e) + ": loss: " + str(loss.item()))
+            
+        y_t = (y_t>0.5).float()
+
+        print()
+        statistics(y_t.squeeze(), y, loss)
+
+    val_path="chr19_raven_graphs_nx_with_gt/val"
+    dataset = FeatureDataset(val_path, additionalFeature)
 
     criterion.weight = torch.tensor([pos_to_neg_ratio(dataset)])
 
     model.eval()
 
-    val_path="chr19_raven_graphs_nx_with_gt/val"
-    dataset = FeatureDataset(val_path, additionalFeature)
-
     print("Validate statistics:")
     print()
+    
     for x, y in dataset:
         y_afterTrain = model(x)
         after_train = criterion(y_afterTrain.squeeze(), y)
